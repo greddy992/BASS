@@ -31,11 +31,13 @@ bass.pyx contains the implementation of the motif discovery algorithm, the speci
 
 main_synthetic_dataset.py is a sample application of the algorithm. This code generates a synthetic dictionary of motifs, a dataset from that dictionary and applies the motif discovery algorithm on the dataset. The output files contain the true dictionary and the one learned by the algorithm along with the probabilities of each motif. 
 
-Important:
+### Important:
 For each new application, a `soft’ clustering model has to be specified. In the code, this is implemented in the GMM_synthetic class in bass.pyx. This class has to be appropriately modified or alternatively a new class should be defined which contains the two functions defined for this class – “_compute_likelihood” and “_generate_sample_from_state”. 
 
+If instead you have the data as a sequence of cluster labels, i.e., `hard' clustered data, then convert it into a sequence of probability vectors, where each probability vector is a unit vector. 
 
-Analysis of tracked zebrafish larvae data:
+
+### Analysis of tracked zebrafish larvae data:
 
 Raw data is in the four folders
 resultsMay2019
@@ -49,7 +51,7 @@ The three files named acid_*.npy contain the mixture model parameters presented 
 
 The files named “data_explo_hmm.npy”, “data_dbsharppH_hmm.npy”, “lengths_explo_hmm.npy” and “lengths_dbsharppH_hmm.npy” are reduced versions of the dataset containing only the information used for clustering and BASS. 
 
-Using BASS to reproduce results from pH experiments:
+### Using BASS to reproduce results from pH experiments:
 
 The Python code to run BASS on the exploration and aversive environment data is in 
 main_explo.py
@@ -61,7 +63,7 @@ The parameters used in the paper are eps = 0.1, p_d = 0.2, Jthr = 0.15. To start
 
 The output from BASS can be read by another Jupyter notebook, see below. 
 
-Analysis of output from BASS:
+### Analysis of output from BASS:
 
 The code used to analyze the output from BASS is included in “analyze BASS output files, final version.ipynb”. This includes extracting the dictionary of motifs in exploratory and aversive environments and generating the various plots presented in the paper. 
 
