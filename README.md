@@ -1,4 +1,8 @@
 # BASS
+
+# NOTE: This repository is no longer being updated. See the fork https://github.com/GautamSridhar/BASS for the latest version. 
+
+
 Code for the "Behavioral Action Sequence Segmentation" algorithm. 
 
 This folder contains all the code for analysis and the implementation of the motif discovery algorithm BASS and instructions to reproduce the figures in the paper titled "A lexical approach for identifying behavioral action sequences". 
@@ -7,7 +11,7 @@ The full data is required to reproduce the figures from the papers is uploaded s
 
 If your goal is to simply use BASS, reading the first section of this README will suffice. 
 
-For questions, email gautam_nallamalaATfas.harvard.edu
+For questions, email gautam_nallamalaATfas.harvard.edu.
 
 Behavioral Action Sequence Segmentation (BASS) usage:
 Three files are used for BASS:
